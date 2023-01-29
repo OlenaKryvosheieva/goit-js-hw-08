@@ -19,7 +19,7 @@ function handlInput(e) {
 }
 
 function preFillForm() {
-  const savedForm = localStorage.getItem(STORAGE_KEY);
+  const savedForm = localStorage.getItem(STORAGE_KEY || '');
   const parsedForm = JSON.parse(savedForm);
 
   if (parsedForm) {
