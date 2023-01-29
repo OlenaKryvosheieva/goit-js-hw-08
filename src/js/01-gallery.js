@@ -1,21 +1,19 @@
+import SimpleLightbox from 'simplelightbox';
 
-import SimpleLightbox from "simplelightbox";
-
-import "simplelightbox/dist/simple-lightbox.min.css";
+import 'simplelightbox/dist/simple-lightbox.min.css';
 import { galleryItems } from './gallery-items';
 console.log(galleryItems);
 
-
 console.log(galleryItems);
 
-const galleryContainer = document.querySelector(".gallery");
+const galleryContainer = document.querySelector('.gallery');
 const galleryItem = createGalleryItem(galleryItems);
 
-galleryContainer.insertAdjacentHTML("beforeend", galleryItem);
-galleryContainer.addEventListener("click", onGalleryContainerClick);
+galleryContainer.insertAdjacentHTML('beforeend', galleryItem);
+galleryContainer.addEventListener('click', onGalleryContainerClick);
 
-const lightbox = new SimpleLightbox(".gallery a", {
-  captionsData: "alt",
+const lightbox = new SimpleLightbox('.gallery a', {
+  captionsData: 'alt',
   captionDelay: 250,
 });
 
@@ -35,13 +33,13 @@ function createGalleryItem(galleryItems) {
     </div>
     `;
     })
-    .join("");
+    .join('');
 }
 
 function onGalleryContainerClick(evt) {
   evt.preventDefault();
 
-  if (evt.target.nodeName !== "IMG") {
+  if (evt.target.nodeName !== 'IMG') {
     return;
   }
 
