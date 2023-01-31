@@ -37,6 +37,8 @@ function handlSubmit(e) {
 
   console.log(formData);
 
-  e.currentTarget.reset();
   localStorage.removeItem(STORAGE_KEY);
+  e.currentTarget.reset();
+  formData.email = '';
+  formData.message = '';
 }
